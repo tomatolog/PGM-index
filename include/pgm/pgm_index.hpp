@@ -225,7 +225,7 @@ public:
      * @return the size of the index in bytes
      */
     size_t size_in_bytes() const {
-        return segments.size() * sizeof(Segment);
+        return segments.size() * sizeof(Segment) + levels_sizes.size() * sizeof(size_t) + levels_offsets.size() * sizeof(size_t);
     }
 };
 

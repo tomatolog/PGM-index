@@ -3,7 +3,7 @@ project(PiecewiseGeometricModelIndex
         VERSION 1.0
         HOMEPAGE_URL https://github.com/gvinciguerra/PGM-index)
 
-option(BUILD_PGM_TUNER "Build the tuner target" ON)
+option(BUILD_PGM_TUNER "Build the tuner target" OFF)
 
 set(CMAKE_CXX_STANDARD 17)
 
