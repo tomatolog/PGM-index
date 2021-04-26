@@ -32,6 +32,8 @@ include_directories(include)
 
 # PGM-index library
 add_library(pgmindexlib INTERFACE)
+file ( GLOB ALL_HEADERS "include/pgm/*.hpp" )
+target_sources(pgmindexlib INTERFACE ${ALL_HEADERS})
 target_include_directories(pgmindexlib INTERFACE include/)
 
 # tuner
