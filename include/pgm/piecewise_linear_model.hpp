@@ -42,7 +42,7 @@ class T_IS_POD
 template<typename T>
 using LargeSigned = typename std::conditional_t<std::is_floating_point_v<T>,
                                                 long double,
-                                                int64_t>;
+                                                std::conditional_t<(sizeof(T) < 8), int64_t, long double>>;
 #else
 
 template<typename T>
